@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulairio de Registro</title>
+</head>
+<body>
+    <h1>Formulario de Registro</h1>
+    <form action="/procesar-registro"method="post">
+        <!-- metodo para enviar o pedir datos -->
+        <label for="nombre"> Nombre</label>
+        <input type="text" name="nombre" id="nombre" required>
+        <label for="edad">Edad</label>
+        <input type="number" name="edad" id="edad"required>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="ejemplo@correo.com" required>
+        <label for="password">Contraseña</label>
+        <input type="password" name="password" id="password" required>
+        <label for="pais">Pais</label>
+        <select name="pais" id="pais">
+            <option value="">Selecciona un pais</option>
+            <option value="es">España</option>
+            <option value="mx">Mexico</option>
+            <option value="ar">Argentina</option>
+            <option value="co">Colombia</option>
+        </select>
+        <label for="genero">Genero</label>
+        <label for="masculino">Masculino</label>
+        <input type="radio" id="masculino" name="genero" value="masculino"required>
+        <label for="femenino">Femenino</label>
+        <input type="radio" id="femenino" name="genero" value="femenino"required>
+        <label for="intereses">Intereses:</label>
+        <label for="deportes">Deportes</label>
+        <input type="checkbox" id="deportes" name="Intereses[]" value="deportes">
+        <label for="musica">Musica</label>
+        <input type="checkbox" id="musica" name="Intereses[]" value="musica">
+        <label for="lectura">Lectura</label>
+        <input type="checkbox" id="lectura" name="Intereses[]" value="lectura">
+        <label for="descripcion">Descripcion</label>
+        <textarea name="descripcion" id="descripcion"></textarea>
+        <button type="submit" id="btnenviar">Enviar</button>
+    </form>
+</body>
+</html>
